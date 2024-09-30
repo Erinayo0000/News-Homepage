@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1440px;
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem 4rem 0.3rem 4rem;
+      padding: 10px 10px;
+   ;
+}
+.navbar ul{
+   
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap :3rem;
+}
+a{
+    color:   hsl(236, 13%, 42%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+a:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+a:active{
+    color:hsl(5, 85%, 63%);
+}
+.flexboxes{
+    display:flex;
+    margin: 0 4rem 0 4rem;
+    gap:2rem;
+}
+.flexing img{
+    height:20rem;
+    padding: 1rem;
+    width:98%;
+    
+}
+.flexcards{
+    display:flex;
+    justify-content: space-around;
+align-items: center;
+    padding: 0.3rem 3rem;
+    gap: 4rem;
+  flex: 1;
+    
+}
+.flexcard1-h1{
+    color:  hsl(240, 100%, 5%);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+.flexcard1-p{
+    color:  hsl(236, 13%, 42%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-bottom: 2rem;
+}
+button{
+    background-color: hsl(5, 85%, 63%);
+    color:  hsl(240, 100%, 5%);
+      padding: 10px 30px;
+      border: none;
+      border-radius: 1px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+}
+.newflex{
+    background-color:hsl(240, 100%, 5%) ;
+    width: 60%;
+   height:30rem;
+}
+.newflex-h2{
+    color: hsl(35, 77%, 62%);
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+}
+.newflex-h3{
+    color: hsl(36, 100%, 99%);
+    padding:1.5rem 1rem 1rem 1rem;;
+    font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+}
+.newflex-p{
+    color: hsl(236, 13%, 42%);
+    padding: 0 1rem 1rem 1rem;
+    font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+}
+hr{
+    /*background-color:hsl(236, 13%, 42%);*/
+    border: none;             /* Remove the default border */
+    height: 0.5px;              /* Set the thickness */
+    background-color: hsl(236, 13%, 42%); /* Set the color */
+    width: 90%;               /* Set the width */
+    margin: 10px auto;        /* Center the hr and add space around it */
+    border-radius: 5px; 
+}
+.flat-cards{
+    display:flex;
+    padding: 1rem 2rem;
+    margin: 2rem;
+}
+.small-cards{
+    display: flex;
+    gap:1rem;
+}
+.reviving{
+    height:7rem;
+}
+.small-cards-red-h3{
+    padding-bottom: 0.5rem;
+color:hsl(5, 85%, 63%);
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+      font-size: 24px;
+}
+.small-cards-h3{
+    padding-bottom: 0.5rem;
+    color:hsl(240, 100%, 5%);
+font-family: 'Inter', sans-serif;
+font-weight: 800;
+      font-size: 16px;
+}
+.small-cards-p{
+    color: hsl(236, 13%, 42%);
+    padding-right:2rem;
+    margin-right: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+          font-size: 14px;
+}
+.attribution{
+    display: flex;
+    justify-content: center;
+}
+.menu-icon{
+    display: none;
+}
+.flexing1 img{
+ display:none;
+    
+}
+#close-icon{
+    display: none;
+}
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navbar {
+        margin: 0.5rem 1rem;
+        
+    }
+    .logo{
+        display: flex;
+        margin: auto;
+        padding: auto;
+        justify-content: space-between;
+        flex: 1;
+        align-items: end;
+       gap: 12rem;
+      
+    }
+    .navbar ul {
+        display: none; /* Hide nav list for mobile */
+    }
+    .logo-img{
+        width: 4rem;
+        padding-left:1rem ;
+    }
+    .menu-icon {
+        display: block; /* Show menu icon for mobile */
+        font-size: 2rem;
+    }
+    .flexboxes {
+        display: block; /* Stack elements vertically */
+        margin: 1rem;
+    }
+    .flexing img {
+        height: auto;
+        width: 100%;
+    }
+    .flexcards {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 0;
+        gap: 1rem;
+    }
+    .flexcard1-h1{
+        font-size: 3rem;
+    }
+    .flexcard1-p{
+        padding: 0 2rem 2rem 2rem ;
+    }
+   .flexcard2{
+    padding-bottom: 1rem;
+
+   }
+   .flexcard2 button{
+    margin-left: 2rem;
+   }
+    .newflex {
+        margin: 2rem;
+       padding: 1.5rem;
+        width: 90%;
+        height: auto;
+    }
+    .flat-cards{
+        display:flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        margin: 2rem;
+    }
+    .small-cards{
+        display: flex;
+        padding: 0.5rem;
+        gap:3rem;
+    }
+    .reviving{
+        
+        width: 25%;
+    }
+    
+    /* Sidebar Menu */
+.nav-list {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    padding: 8rem 1rem;
+    box-shadow: -4px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+}
+
+
+.nav-list.active {
+    right: 0; /* Slide in the sidebar */
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-list ul li a {
+    color: hsl(236, 13%, 42%);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-list ul li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+/* Overlay for the background blur */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+}
+
+#content.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s;
+}
+
+/* Close button */
+.menu-icon img {
+    cursor: pointer;
+}
+
+    
+}
+
+/* Media Queries for Smaller Mobile Screens */
+@media (max-width: 576px) {
+    .navbar {
+        margin: 0.5rem;
+    }
+   
+    .flexcard1-h1 {
+        padding: 1rem 2rem;
+        font-size: 2rem; /* Adjust heading font size */
+        font-weight: 300px;
+    }
+    .newflex {
+        width: 85%;
+        height: auto;
+        padding: 1rem;
+    }
+    button {
+        width: 50%; /* Make button full width on mobile */
+        padding: 10px;
+    }
+    .small-cards-p {
+        padding-right: 1rem;
+    }
+
+    .flexing img {
+        height: 300px;
+        width: 100%;
+    }
+
+   
+   .flexcard2 button{
+    margin-left: 2rem;
+   }
+   
+   .flat-cards{
+    display:flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 1rem;
+}
+.small-cards{
+    display: flex;
+    padding: 1rem;
+    gap:2rem;
+}
+.reviving{
+    width: 50%;
+}
+.attribution{
+    display: block;
+    font-size: 14px;
+    margin: 1rem;
+    
+    
+}
+}

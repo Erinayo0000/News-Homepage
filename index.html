@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | News homepage</title>
+
+  
+</head>
+<body>
+<div> <!--body div-->
+  
+  <nav class="navbar">
+    <div class="logo">
+      <div>
+        <img  class="logo-img" src="./assets/images/logo.svg" alt="">
+      </div>
+      
+      <div class="menu-icon" id="hamburger-icon" onclick="toggleMenu()">
+        <img src="./assets/images/icon-menu.svg" alt="">
+      </div>
+      <div class="menu-icon" id="close-icon" onclick="toggleMenu()">
+        <img src="./assets/images/icon-menu-close.svg" alt="Close Menu">
+      </div>
+    </div>
+
+   
+    <div id="sidebar"  class="nav-list">
+      <ul>
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
+<div id="content"> <!-- content for blurring -->
+    <!-- Your content here -->
+    <div class="flexboxes">
+      <div class="flexing">
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="">
+        <div class="flexing1"><img class="flexing1" src="./assets/images/image-web-3-mobile.jpg" alt=""></div>
+     
+        <div class="flexcards">
+          <div class="flexcard1">
+            <h1 class="flexcard1-h1">The Bright  Future of Web 3.0?</h1>
+          </div>
+          <div class="flexcard2">
+            <p class="flexcard1-p">We dive into the next evolution of the web that 
+              claims to put the power of the platforms back  into the hands of the people. 
+              But is it really  fulfilling its promise?</p>
+              <a href="#"><button type="button" class="read-button">Read More</button></a>
+          </div>
+        </div>
+      </div>
+  
+  <div class="newflex">
+    <h2 class="newflex-h2">New</h2>
+    <h3 class="newflex-h3">Hydrogen VS Electric Cars</h3>
+    <p class="newflex-p"> Will hydrogen-fueled cars ever catch up to EVs?</p>
+    <hr>
+    <h3 class="newflex-h3">The Downsides of AI Artistry</h3>
+    <p class="newflex-p">What are the possible adverse effects of on-demand AI image generation?</p>
+    <hr>
+    <h3 class="newflex-h3">Is VC Funding Drying Up?</h3>
+    <p class="newflex-p">  What happens when old PCs are given modern upgrades?</p>
+  </div>
+    </div>
+  
+    <div class="flat-cards">
+  <div class="small-cards">
+    <img class="reviving" src="./assets/images/image-retro-pcs.jpg" alt="">
+    <div>
+      <h3 class="small-cards-red-h3">01</h3>
+  <h3 class="small-cards-h3">Reviving Retro PCs</h3>
+  <p class="small-cards-p" >What happens when old PCs are given modern upgrades?</p>
+    </div>
+  </div>
+  
+  <div class="small-cards">
+    <img class="reviving" src="./assets/images/image-top-laptops.jpg" alt="">
+    <div>
+      <h3 class="small-cards-red-h3">02</h3>
+  <h3 class="small-cards-h3">Top 10 Laptops of 2022</h3>
+  <p class="small-cards-p" >Our best picks for various needs and budgets.</p>
+    </div>
+  </div>
+    <div class="small-cards">
+      <img class="reviving" src="./assets/images/image-gaming-growth.jpg" alt="">
+      <div>
+        <h3 class="small-cards-red-h3">03</h3>
+    <h3 class="small-cards-h3">The Growth of Gaming</h3>
+    <p class="small-cards-p" >How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </div>
+  </div> <!--body div-->
+  
+    <div class="attribution">
+  
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Erinayo0000">Olusanmi Pamilerin</a>.
+    </div>
+  
+</div>
+
+  
+
+  <script>
+    
+
+    function toggleMenu() {
+      var sidebar = document.getElementById('sidebar');
+      var overlay = document.getElementById('overlay');
+      var content = document.getElementById('content');
+      var hamburgerIcon = document.getElementById('hamburger-icon');
+      var closeIcon = document.getElementById('close-icon');
+
+      // Toggle sidebar and overlay visibility
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+      
+      // Toggle blur on the content when sidebar is active
+      if (sidebar.classList.contains('active')) {
+        content.classList.add('blur-background');
+        hamburgerIcon.style.display = 'none'; // Hide hamburger icon
+        closeIcon.style.display = 'block';   // Show close icon
+      } else {
+        content.classList.remove('blur-background');
+        hamburgerIcon.style.display = 'block'; // Show hamburger icon
+        closeIcon.style.display = 'none';    // Hide close icon
+      }
+    }
+
+  </script>
+</body>
+</html>
