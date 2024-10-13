@@ -172,6 +172,10 @@ font-weight: 800;
         margin: 0.5rem 1rem;
         
     }
+    #close-icon{
+        display: none;
+    }
+    
     .logo{
         display: flex;
         margin: auto;
@@ -279,7 +283,7 @@ font-weight: 800;
 
 /* Overlay for the background blur */
 .overlay {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -289,7 +293,10 @@ font-weight: 800;
     display: none;
     transition: opacity 0.3s ease;
 }
-
+.close-icon{
+    position: absolute;
+    top:2rem;
+}
 .overlay.active {
     display: block;
 }
